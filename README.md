@@ -19,36 +19,36 @@ Welcome to the interactive guide and demo repo for the "Model Context Protocol (
 3. [MCP Architecture](#mcp-architecture)
     - [Client-Server Model](#client-server-model)
     - [Communication Lifecycle](#communication-lifecycle)
-4. [Transports](#transports)
-    - [Local (stdio)](#local-transport)
-    - [Remote (HTTP+SSE, Streamable HTTP)](#remote-transport)
-5. [Ecosystem & Adoption](#ecosystem--adoption)
+    - [Transports](#transports)
+        - [Local (stdio)](#local-transport)
+        - [Remote (HTTP+SSE, Streamable HTTP)](#remote-transport)
+4. [Ecosystem & Adoption](#ecosystem--adoption)
     - [Community & Open Source](#community)
     - [Enterprise Use Cases](#enterprise)
-6. [Real-World Examples](#real-world-examples)
+5. [Real-World Examples](#real-world-examples)
     - [Calculator MCP Server (Demo)](#calculator-demo)
     - [Brand Kit MCP Server (Demo)](#brand-kit-demo)
     - [Conversational Intelligence MCP (Demo)](#conversational-intelligence-demo)
-7. [Prompt Engineering](#prompt-engineering)
+6. [Prompt Engineering](#prompt-engineering)
     - [Good vs. Bad Prompts](#prompt-best-practices)
     - [Prompt Templates](#prompt-templates)
-8. [Security & Auth](#security--auth)
+7. [Security & Auth](#security--auth)
     - [Authentication & Authorization](#auth)
     - [Best Practices](#security-best-practices)
-9. [Live Demos](#live-demos)
+8. [Live Demos](#live-demos)
     - [Connecting Clients](#client-integration)
     - [End-to-End Example Flows](#example-flows)
-10. [MCP Inspector & Debugging](#mcp-inspector--debugging)
+9. [MCP Inspector & Debugging](#mcp-inspector--debugging)
     - [Server Inspection & Testing](#server-inspection)
     - [Tools & Resources Exploration](#tools-exploration)
     - [Debugging Best Practices](#debugging)
-11. [Deployment Options](#deployment-options)
+10. [Deployment Options](#deployment-options)
     - [n8n](#n8n-deployment)
     - [Cloudflare](#cloudflare-deployment)
     - [Local](#local-deployment)
     - [Replit/Cloud](#replit-deployment)
     - [GCP](#gcp-deployment)
-12. [Q&A](#qa)
+11. [Q&A](#qa)
 
 ---
 
@@ -87,6 +87,8 @@ This creates a messy situation where every connection is custom-built and fragil
 What if there was a standard? What if AI tools could all speak the same language—one built for context, security, and extensibility?
 
 That's where MCP comes in. MCP is about **context**—delivering the right information, tools, and prompts to your AI, exactly when it needs them. It's about making your AI smarter, more capable, and easier to build, by giving it a common protocol for everything it needs to do.
+
+<br />
 
 ![Standardizing AI Apps](images/standardize-ai-apps.png)
 
@@ -146,7 +148,6 @@ You'll see MCP in action through several live demonstrations:
 
 ## MCP Core Concepts
 
-
 ![Tools, Resources and Prompts](images/tools-resources-prompts.jpg)
 
 ### Tools
@@ -180,6 +181,8 @@ Prompts define the conversation flow and instructions for AI models. They includ
 
 Well-crafted prompts are essential for reliable and consistent AI behavior.
 
+# MCP Architecture
+
 ## Client-Server Model
 
 The MCP follows a client-server architecture where:
@@ -203,7 +206,8 @@ The MCP follows a client-server architecture where:
    - Ensures high availability and reliability
    - Supports multiple deployment options (local, cloud, edge)
 
----
+<br />
+
 ![Client-Server Architecture](images/client-server-architecture.jpg)
 
 The client-server model enables:
@@ -212,27 +216,103 @@ The client-server model enables:
 - Secure communication
 - Standardized interfaces
 
+
+<br />
+
 ![Client-Server Benefits](images/client-server-benefits.png)
 
 ## Communication Lifecycle
 
-[Content coming soon]
+The MCP communication lifecycle follows these key steps:
 
-## Local Transport
+1. **Connection Establishment**
+   - Client initiates connection to MCP server
+   - Authentication and handshake
+   - Transport protocol negotiation
 
-[Content coming soon]
+2. **Request Processing**
+   - Client sends structured request
+   - Server validates and processes request
+   - Tools and resources are accessed
+   - AI model generates response
 
-## Remote Transport
+3. **Response Handling**
+   - Server formats response
+   - Client processes and displays results
+   - State is updated if needed
 
-[Content coming soon]
+4. **Error Handling**
+   - Graceful error recovery
+   - Retry mechanisms
+   - Fallback options
 
-## Community
+5. **Connection Management**
+   - Keep-alive mechanisms
+   - Connection pooling
+   - Resource cleanup
 
-[Content coming soon]
+This lifecycle ensures:
+- Reliable communication
+- State consistency
+- Error resilience
+- Resource efficiency
 
-## Enterprise
 
-[Content coming soon]
+<br />
+
+![Communication Lifecycle](images/communication-lifecycle.jpg)
+
+### Transports
+
+The MCP supports multiple transport mechanisms for client-server communication:
+
+#### Local Transport
+- Direct in-process communication
+- Zero network overhead
+- Ideal for single-machine deployments
+- Synchronous execution model
+
+#### Remote Transport
+- Network-based communication
+- Supports distributed deployments
+- Asynchronous execution model
+- Built-in retry and error handling
+
+## Ecosystem & Adoption
+
+The MCP ecosystem is growing rapidly, with adoption across various sectors:
+
+### Community Growth
+- Active developer community
+- Open source contributions
+- Regular meetups and workshops
+- Growing documentation and resources
+
+### Enterprise Adoption
+- Fortune 500 companies implementing MCP
+- Integration with existing AI infrastructure
+- Custom MCP server development
+- Enterprise-grade security features
+
+<br />
+
+![Ecosystem Growth](images/ecosystem-features.png)
+
+### Key Benefits
+- Standardized AI tooling
+- Reduced development time
+- Improved security
+- Better scalability
+- Enhanced maintainability
+
+### Future Roadmap
+- Enhanced tooling support
+- Additional transport protocols
+- Improved debugging capabilities
+- Enterprise features
+- Cloud-native deployments
+
+## Demos
 
 ## Calculator Demo
 
