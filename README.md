@@ -326,21 +326,46 @@ The Calculator MCP app demonstrates how an AI agent can use the Model Context Pr
 
 This setup shows secure, standardized, and extensible AI tool integration using MCP.
 
-## Brand Kit Demo
-
-[Content coming soon]
-
 ## Conversational Intelligence Demo
 
-[Content coming soon]
+**Summary**
 
-## Prompt Best Practices
+The Conversation Analyzer demo is a system that helps users search, analyze, and get insights from conversations, such as call transcripts. It uses an AI agent to understand user questions and select the right tools to find answers. The system is split into two main parts: the client (which handles user interaction and AI reasoning) and the server (which stores the data and provides search and analytics tools).
 
-[Content coming soon]
+---
 
-## Prompt Templates
+### Client
 
-[Content coming soon]
+- Listens for user messages and questions.
+- Uses AI to figure out what the user wants.
+- Picks the best tool(s) to answer the question.
+- Can use both OpenAI and Google Gemini for understanding and summarizing.
+- Remembers recent conversation context for better responses.
+
+**Key Features:**
+- Understands natural language questions.
+- Chooses and combines tools to answer complex queries.
+- Summarizes and explains results clearly.
+
+---
+
+### Server
+
+- Stores all conversation data, including transcripts, participants, and summaries.
+- Provides a set of tools for searching, analyzing, and summarizing conversations.
+- Logs every tool use for tracking and improvement.
+
+**Key Features:**
+- Search conversations by topic, keywords, or participant.
+- Find specific details about any conversation.
+- Search for parts of conversations with certain emotions (like anger or frustration).
+- Show statistics about calls, such as how many were inbound or outbound, and average call length.
+- List common topics discussed in conversations.
+- Track how often each tool is used and how well they perform.
+- Create and update special data (embeddings) to improve search results.
+
+**In short:**  
+The client helps users ask questions and get answers, while the server does the heavy lifting of searching and analyzing the conversation data. Together, they make it easy to find insights in large sets of conversations.
 
 ## Auth
 
@@ -389,3 +414,16 @@ This setup shows secure, standardized, and extensible AI tool integration using 
 ## GCP Deployment
 
 [Content coming soon]
+
+Contact Me:
+
+## Questions? Contact Me
+
+If you have any questions, feedback, or need assistance with this project, feel free to reach out:
+
+- **Email**: mailto:mike@antics.tv
+- **LinkedIn**: https://www.linkedin.com/in/mikeonslow/
+- **Twitter**: https://x.com/mike_onslow
+
+I'm always happy to help and collaborate on interesting projects!
+
