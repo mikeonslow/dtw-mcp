@@ -27,7 +27,6 @@ Welcome to the interactive guide and demo repo for the "Model Context Protocol (
     - [Enterprise Use Cases](#enterprise)
 5. [Real-World Examples](#real-world-examples)
     - [Calculator MCP Server (Demo)](#calculator-demo)
-    - [Brand Kit MCP Server (Demo)](#brand-kit-demo)
     - [Conversational Intelligence MCP (Demo)](#conversational-intelligence-demo)
 6. [Prompt Engineering](#prompt-engineering)
     - [Good vs. Bad Prompts](#prompt-best-practices)
@@ -129,20 +128,17 @@ Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standar
 
 You'll see MCP in action through several live demonstrations:
 
-1. **Calculator MCP Demo**
+#### **Calculator MCP Demo**
    - Simple MCP server that adds two numbers
    - Client integration with n8n
    - Live calculation demonstration
 
-2. **Conversational Intelligence Agent**
+#### **Conversational Intelligence Agent**
    - Analyze ~125 call details (transcript, summary, dialogs, parties)
    - Real-time insights and analysis
    - n8n + Replit integration
 
-3. **Brand Kit MCP Server**
-   - Brand color and font integration
-   - Cursor AI content generation
-   - Live web component creation
+<br />
 
 > **Get Ready!** By the end of this session, you'll have everything you need to start building your own MCP-powered AI applications.
 
@@ -215,7 +211,6 @@ The client-server model enables:
 - Scalable deployments
 - Secure communication
 - Standardized interfaces
-
 
 <br />
 
@@ -324,7 +319,31 @@ The Calculator MCP app demonstrates how an AI agent can use the Model Context Pr
 - **MCP Client Agent:** Receives user messages, uses AI to interpret them, and calls the server for results.  
   [Calculator_MCP_Client_Agent.json](demos/calculator/Calculator_MCP_Client_Agent.json)
 
-This setup shows secure, standardized, and extensible AI tool integration using MCP.
+![Calculator Client-Server Architecture](images/calculator_client_server.jpg)
+
+The Calculator demo shows how MCP enables AI agents to use external tools:
+
+1. **User Input:** The user sends a message like "What is 123 * 456?"
+
+2. **Client Processing:**
+   - The AI agent receives the message
+   - Analyzes the request to identify the calculation needed
+   - Determines which MCP tool to use
+
+3. **MCP Communication:**
+   - Client sends the calculation request to the MCP server
+   - Server performs the calculation using its calculator tool (built into n8n)
+   - Result is returned to the client
+
+4. **Response:**
+   - AI agent receives the calculation result
+   - Formats and returns the answer to the user
+
+This MCP enables AI agents to:
+- Delegate specific tasks to specialized tools
+- Maintain clean separation between AI reasoning and tool execution
+- Scale capabilities by adding new tools without changing the agent
+
 
 ## Conversational Intelligence Demo
 
@@ -397,11 +416,17 @@ The client helps users ask questions and get answers, while the server does the 
 
 ## n8n Deployment
 
-[Content coming soon]
+Very simple no code implementation for both client and server
+
+#### Client
+https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/
+
+#### Server
+https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigger/
 
 ## Cloudflare Deployment
 
-[Content coming soon]
+https://blog.cloudflare.com/remote-model-context-protocol-servers-mcp/
 
 ## Local Deployment
 
@@ -414,6 +439,11 @@ The client helps users ask questions and get answers, while the server does the 
 ## GCP Deployment
 
 [Content coming soon]
+
+## Resources
+
+### Course on building MCP apps:
+https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic
 
 Contact Me:
 
