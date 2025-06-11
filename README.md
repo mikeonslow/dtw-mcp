@@ -90,30 +90,66 @@ That's where MCP comes in. MCP is about **context**—delivering the right infor
 
 > **Context is king.** The more relevant, timely, and structured the context you give your AI, the more powerful and reliable it becomes. MCP is the backbone that makes this possible.
 
-## The Evolution of Protocols
+### The Evolution of Protocols
 
-Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standardizes how AI applications interact with external systems. Let's look at how these protocols evolved:
+>Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standardizes how AI applications interact with external systems. Let's look at how these protocols evolved
 
-```mermaid
-flowchart LR
-    subgraph REST[REST APIs]
-        A1["Standardize how web applications interact with the backend"]
-    end
-    subgraph LSP[LSP]
-        B1["Standardizes how IDEs interact with language-specific tools"]
-    end
-    subgraph MCP[MCP]
-        C1["Standardizes how AI applications interact with external systems"]
-    end
-    REST -- "Web App <-> Backend" --> A1
-    LSP -- "IDE <-> Language Tools" --> B1
-    MCP -- "AI App <-> External Systems" --> C1
-    REST -.-> MCP
-    LSP -.-> MCP
-    style REST fill:#f87171,stroke:#f87171,stroke-width:2px
-    style LSP fill:#60a5fa,stroke:#60a5fa,stroke-width:2px
-    style MCP fill:#f59e42,stroke:#f59e42,stroke-width:2px
-```
+| Protocol | Purpose | Impact |
+|----------|---------|---------|
+| REST | Standardized web APIs | Enabled the modern web |
+| LSP | Standardized IDE tooling | Revolutionized code editing |
+| MCP | Standardizes AI context | Powers next-gen AI tools |
+
+### What You'll Learn Today
+
+1. **Core Concepts**
+   - What MCP is and why it matters
+   - How MCP standardizes AI context
+   - Key components and architecture
+
+2. **Technical Walk-through**
+   - Building MCP servers
+   - Creating MCP clients
+   - Implementing transports
+   - Security and authentication
+
+3. **Real-World Applications**
+   - Live demos of MCP in action
+   - Integration patterns
+   - Best practices and gotchas
+
+4. **Hands-On Experience**
+   - Deploying your own MCP server
+   - Building a simple MCP client
+   - Testing and debugging
+
+### Live Demos
+
+You'll see MCP in action through several live demonstrations:
+
+1. **Calculator MCP Demo**
+   - Simple MCP server that adds two numbers
+   - Client integration with n8n
+   - Live calculation demonstration
+
+2. **Conversational Intelligence Agent**
+   - Analyze ~125 call details (transcript, summary, dialogs, parties)
+   - Real-time insights and analysis
+   - n8n + Replit integration
+
+3. **Brand Kit MCP Server**
+   - Brand color and font integration
+   - Cursor AI content generation
+   - Live web component creation
+
+4. **MCP Inspector Walkthrough**
+   - Debug and test MCP servers
+   - Explore tools, resources, and prompts
+   - Live server inspection
+
+> **Get Ready!** By the end of this session, you'll have everything you need to start building your own MCP-powered AI applications.
+
+
 
 
 ---
