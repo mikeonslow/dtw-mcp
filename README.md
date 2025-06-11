@@ -60,7 +60,7 @@ Each section links to a detailed explanation, code samples, and live demo instru
 
 ### About the Speaker
 
-<img src="https://media.licdn.com/dms/image/v2/D4E03AQGOjghcjGZN4w/profile-displayphoto-shrink_800_800/B4EZVknG6tH0Ac-/0/1741149728879?e=1755129600&v=beta&t=wLdyza16W7_ceYrlKvr-3HQtzL4IdRbxgKsQqDSeU2s" alt="Mike Onslow" style="border-radius: 50%; border: 3px solid white; width: 30%; display: block; margin: 0 auto;">
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQGOjghcjGZN4w/profile-displayphoto-shrink_800_800/B4EZVknG6tH0Ac-/0/1741149728879?e=1755129600&v=beta&t=wLdyza16W7_ceYrlKvr-3HQtzL4IdRbxgKsQqDSeU2s" alt="Mike Onslow" style="border-radius: 50%; border: 3px solid white; width: 10%; display: block; margin: 0 auto;">
 
 **Mike Onslow**  
 - CTO @ [Clarity Voice](https://clarityvoice.com)
