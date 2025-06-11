@@ -5,50 +5,49 @@ Welcome to the interactive guide and demo repo for the "Model Context Protocol (
 ## Table of Contents
 
 0. [Speaker Introduction](#speaker-introduction)
-    - About the Speaker
-    - Experience & Background
-    - Contact Information
 
 1. [Introduction](#introduction)
     - [Why MCP? (Context is King)](#why-mcp-context-is-king)
-    - What is the Model Context Protocol (MCP)?
-    - What will you learn and see demoed today?
+    - [What is the Model Context Protocol (MCP)?](#what-is-mcp)
+    - [The Evolution of Protocols](#the-evolution-of-protocols)
+    - [What will you learn and see demoed today?](#what-will-you-learn)
+    - [Live Demos](#live-demos)
 2. [MCP Core Concepts](#mcp-core-concepts)
-    - Tools
-    - Resources
-    - Prompts
+    - [Tools](#tools)
+    - [Resources](#resources)
+    - [Prompts](#prompts)
 3. [MCP Architecture](#mcp-architecture)
-    - Client-Server Model
-    - Communication Lifecycle
+    - [Client-Server Model](#client-server-model)
+    - [Communication Lifecycle](#communication-lifecycle)
 4. [Transports](#transports)
-    - Local (stdio)
-    - Remote (HTTP+SSE, Streamable HTTP)
+    - [Local (stdio)](#local-transport)
+    - [Remote (HTTP+SSE, Streamable HTTP)](#remote-transport)
 5. [Ecosystem & Adoption](#ecosystem--adoption)
-    - Community & Open Source
-    - Enterprise Use Cases
+    - [Community & Open Source](#community)
+    - [Enterprise Use Cases](#enterprise)
 6. [Real-World Examples](#real-world-examples)
-    - Calculator MCP Server (Demo)
-    - Brand Kit MCP Server (Demo)
-    - Conversational Intelligence MCP (Demo)
+    - [Calculator MCP Server (Demo)](#calculator-demo)
+    - [Brand Kit MCP Server (Demo)](#brand-kit-demo)
+    - [Conversational Intelligence MCP (Demo)](#conversational-intelligence-demo)
 7. [Prompt Engineering](#prompt-engineering)
-    - Good vs. Bad Prompts
-    - Prompt Templates
+    - [Good vs. Bad Prompts](#prompt-best-practices)
+    - [Prompt Templates](#prompt-templates)
 8. [Security & Auth](#security--auth)
-    - Authentication & Authorization
-    - Best Practices
+    - [Authentication & Authorization](#auth)
+    - [Best Practices](#security-best-practices)
 9. [Live Demos](#live-demos)
-    - Connecting Clients (Claude, n8n, OpenAI, etc.)
-    - End-to-End Example Flows
+    - [Connecting Clients](#client-integration)
+    - [End-to-End Example Flows](#example-flows)
 10. [MCP Inspector & Debugging](#mcp-inspector--debugging)
-    - Server Inspection & Testing
-    - Tools & Resources Exploration
-    - Debugging Best Practices
+    - [Server Inspection & Testing](#server-inspection)
+    - [Tools & Resources Exploration](#tools-exploration)
+    - [Debugging Best Practices](#debugging)
 11. [Deployment Options](#deployment-options)
-    - n8n
-    - Cloudflare
-    - Local
-    - Replit/Cloud
-    - GCP
+    - [n8n](#n8n-deployment)
+    - [Cloudflare](#cloudflare-deployment)
+    - [Local](#local-deployment)
+    - [Replit/Cloud](#replit-deployment)
+    - [GCP](#gcp-deployment)
 12. [Q&A](#qa)
 
 ---
@@ -101,7 +100,7 @@ Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standar
 | LSP | Standardized IDE tooling | Revolutionized code editing |
 | MCP | Standardizes AI context | Powers next-gen AI tools |
 
-### What You'll Learn Today
+### What Will You Learn?
 
 1. **Core Concepts**
    - What MCP is and why it matters
@@ -145,3 +144,134 @@ You'll see MCP in action through several live demonstrations:
 
 > **Get Ready!** By the end of this session, you'll have everything you need to start building your own MCP-powered AI applications.
 
+## MCP Core Concepts
+
+
+![Tools, Resources and Prompts](images/tools-resources-prompts.jpg)
+
+### Tools
+
+Tools are the building blocks of MCP servers that enable AI models to interact with external systems and perform specific tasks. Each tool defines:
+
+- A unique identifier
+- Input parameters and their types
+- Output format
+- Description of its functionality
+
+### Resources
+
+Resources provide persistent data storage and state management for MCP servers. They can be:
+
+- Files and documents
+- Databases and key-value stores
+- External API connections
+- Configuration settings
+
+Resources enable tools to maintain context and state across multiple interactions.
+
+### Prompts
+
+Prompts define the conversation flow and instructions for AI models. They include:
+
+- System instructions
+- User messages
+- Tool usage patterns
+- Response formatting
+
+Well-crafted prompts are essential for reliable and consistent AI behavior.
+
+
+
+
+
+## Client-Server Model
+
+[Content coming soon]
+
+## Communication Lifecycle
+
+[Content coming soon]
+
+## Local Transport
+
+[Content coming soon]
+
+## Remote Transport
+
+[Content coming soon]
+
+## Community
+
+[Content coming soon]
+
+## Enterprise
+
+[Content coming soon]
+
+## Calculator Demo
+
+[Content coming soon]
+
+## Brand Kit Demo
+
+[Content coming soon]
+
+## Conversational Intelligence Demo
+
+[Content coming soon]
+
+## Prompt Best Practices
+
+[Content coming soon]
+
+## Prompt Templates
+
+[Content coming soon]
+
+## Auth
+
+[Content coming soon]
+
+## Security Best Practices
+
+[Content coming soon]
+
+## Client Integration
+
+[Content coming soon]
+
+## Example Flows
+
+[Content coming soon]
+
+## Server Inspection
+
+[Content coming soon]
+
+## Tools Exploration
+
+[Content coming soon]
+
+## Debugging
+
+[Content coming soon]
+
+## n8n Deployment
+
+[Content coming soon]
+
+## Cloudflare Deployment
+
+[Content coming soon]
+
+## Local Deployment
+
+[Content coming soon]
+
+## Replit Deployment
+
+[Content coming soon]
+
+## GCP Deployment
+
+[Content coming soon]
