@@ -180,13 +180,39 @@ Prompts define the conversation flow and instructions for AI models. They includ
 
 Well-crafted prompts are essential for reliable and consistent AI behavior.
 
-
-
-
-
 ## Client-Server Model
 
-[Content coming soon]
+The MCP follows a client-server architecture where:
+
+1. **MCP Client**
+   - Initiates requests to MCP servers
+   - Handles authentication and transport
+   - Manages conversation state
+   - Processes server responses
+
+2. **MCP Server**
+   - Exposes tools and resources
+   - Processes client requests
+   - Manages AI model interactions
+   - Returns structured responses
+
+3. **MCP Host**
+   - Provides runtime environment for MCP servers
+   - Manages server lifecycle and scaling
+   - Handles resource allocation
+   - Ensures high availability and reliability
+   - Supports multiple deployment options (local, cloud, edge)
+
+---
+![Client-Server Architecture](images/client-server-architecture.jpg)
+
+The client-server model enables:
+- Decoupled AI capabilities
+- Scalable deployments
+- Secure communication
+- Standardized interfaces
+
+![Client-Server Benefits](images/client-server-benefits.png)
 
 ## Communication Lifecycle
 
