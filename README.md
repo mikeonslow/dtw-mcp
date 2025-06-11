@@ -37,16 +37,19 @@ Welcome to the interactive guide and demo repo for the "Model Context Protocol (
     - Authentication & Authorization
     - Best Practices
 9. [Live Demos](#live-demos)
-    - Running MCP Inspector
     - Connecting Clients (Claude, n8n, OpenAI, etc.)
     - End-to-End Example Flows
-10. [Deployment Options](#deployment-options)
+10. [MCP Inspector & Debugging](#mcp-inspector--debugging)
+    - Server Inspection & Testing
+    - Tools & Resources Exploration
+    - Debugging Best Practices
+11. [Deployment Options](#deployment-options)
     - n8n
     - Cloudflare
     - Local
     - Replit/Cloud
     - GCP
-11. [Q&A](#qa)
+12. [Q&A](#qa)
 
 ---
 
@@ -88,11 +91,9 @@ That's where MCP comes in. MCP is about **context**—delivering the right infor
 
 ![Standardizing AI Apps](images/standardize-ai-apps.png)
 
-> **Context is king.** The more relevant, timely, and structured the context you give your AI, the more powerful and reliable it becomes. MCP is the backbone that makes this possible.
-
 ### The Evolution of Protocols
 
->Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standardizes how AI applications interact with external systems. Let's look at how these protocols evolved
+Just as REST standardized web APIs and LSP standardized IDE tooling, MCP standardizes how AI applications interact with external systems. Let's look at how these protocols evolved
 
 | Protocol | Purpose | Impact |
 |----------|---------|---------|
@@ -142,16 +143,5 @@ You'll see MCP in action through several live demonstrations:
    - Cursor AI content generation
    - Live web component creation
 
-4. **MCP Inspector Walkthrough**
-   - Debug and test MCP servers
-   - Explore tools, resources, and prompts
-   - Live server inspection
-
 > **Get Ready!** By the end of this session, you'll have everything you need to start building your own MCP-powered AI applications.
 
-
-
-
----
-
-> **Tip:** This repo is designed for both live presentation and as a reference for building your own MCP-powered AI tools.
