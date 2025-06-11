@@ -393,35 +393,61 @@ The client helps users ask questions and get answers, while the server does the 
 
 ## Auth
 
-[Content coming soon]
+Authentication in MCP is essential for securing communication between clients and servers. While MCP supports various authentication methods, we'll focus on the most common and straightforward approach: Bearer Token Authentication.
 
-## Security Best Practices
+### Basic Authentication Flow
 
-[Content coming soon]
+1. **Bearer Token Setup**
+   - Generate a secure token for your MCP server
+   - Configure the token in your client application
+   - Include the token in request headers
 
-## Client Integration
+2. **Implementation Example**
+   ```json
+   {
+     "parameters": {
+       "sseEndpoint": "https://your-mcp-server.com",
+       "authentication": "bearerAuth"
+     },
+     "credentials": {
+       "httpBearerAuth": {
+         "token": "your-secure-token"
+       }
+     }
+   }
+   ```
 
-[Content coming soon]
+### Security Considerations
 
-## Example Flows
+- Keep tokens secure and never expose them in client-side code
+- Use HTTPS for all MCP communications
+- Rotate tokens regularly
+- Implement proper token validation on the server side
 
-[Content coming soon]
+### Best Practices
+
+1. **Token Management**
+   - Store tokens securely
+   - Use environment variables for token values
+   - Implement token expiration
+   - Have a token rotation strategy
+
+2. **Error Handling**
+   - Handle authentication failures gracefully
+   - Provide clear error messages
+   - Implement proper logging for security events
+
+> **Note:** While this covers basic authentication, enterprise applications may require more sophisticated authentication methods like OAuth 2.0 or custom authentication schemes. These can be implemented based on your specific security requirements.
 
 ## Server Inspection
 
 [Content coming soon]
 
-## Tools Exploration
-
-[Content coming soon]
-
-## Debugging
-
-[Content coming soon]
-
 ## n8n Deployment
 
-Very simple no code implementation for both client and server
+Very simple no code implementation for both MCP clients and servers
+
+n8n documentation linked below
 
 #### Client
 https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.toolmcp/
@@ -432,18 +458,6 @@ https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.mcptrigg
 ## Cloudflare Deployment
 
 https://blog.cloudflare.com/remote-model-context-protocol-servers-mcp/
-
-## Local Deployment
-
-[Content coming soon]
-
-## Replit Deployment
-
-[Content coming soon]
-
-## GCP Deployment
-
-[Content coming soon]
 
 ## Resources
 
