@@ -1,0 +1,178 @@
+{
+  "name": "Conversation Analyzer",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "793520e9-c269-4fcd-a93f-d0b53136bcbc",
+      "name": "When chat message received",
+      "webhookId": "c0db915d-59db-44e9-8a21-2dde76725a69"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are equipped with a variety of tools to assist in retrieving and analyzing data. Please follow these guidelines to ensure effective usage:\n\nClarify Queries: Before performing searches or analytics, ensure the query is well-defined, specific, and relevant to the available tools.\n\nSelect Appropriate Tools: Use the most suitable tool based on the nature of the query. For instance, use `search_vcons` for searching specific records, `get_call_statistics` for call data, and `search_dialogs` for conversation entries.\n\nLimit Results: When performing searches, consider using limits to manage the volume of returned data, making it easier to analyze.\n\nCombine Tools When Necessary: If a query requires multiple data points, use the `multi_tool_use.parallel` function to execute relevant tools simultaneously when feasible.\n\nReview Results Thoroughly: After obtaining results, carefully analyze the data to ensure it meets the query requirements. Cross-reference data from different tools if needed for comprehensive insights.\n\nIterate on Queries: If initial searches do not yield satisfactory results, refine the search terms or try different tools based on the context obtained from previous attempts.\n\nDocument Findings: Keep a record of significant results and insights for future reference and analysis.\n\nBy adhering to these guidelines, you will maximize the effectiveness of the available tools and retrieve valuable insights efficiently."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "id": "40582cfe-935d-4c3a-a0dc-450f0bb206f6",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "sseEndpoint": "https://c30b46e0-c9f4-44f3-ab4e-404846c80e82-00-3f701r3xnezgb.janeway.replit.dev:5000/sse",
+        "authentication": "bearerAuth"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "typeVersion": 1,
+      "position": [
+        520,
+        240
+      ],
+      "id": "34712ef3-6afe-42fe-835c-6ebb3d3b1603",
+      "name": "Conversation MCP Client",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "8ziatKcj4OpzNHOJ",
+          "name": "DTW Auth MCP"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        240
+      ],
+      "id": "4a2404f0-d388-43ac-91e2-688e8430d48f",
+      "name": "gpt-4o-mini",
+      "credentials": {
+        "openAiApi": {
+          "id": "DOGuwpmMQWCNeotG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-preview-05-20",
+        "options": {
+          "maxOutputTokens": 50000,
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        240
+      ],
+      "id": "97c75851-d465-4407-a7f7-274f09809c75",
+      "name": "flash-2.5-preview-0520",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "2laOseS0uHZLmp19",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 300
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        260,
+        240
+      ],
+      "id": "fb3df1dc-3961-45b8-8650-f7792b1032cd",
+      "name": "Chat Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conversation MCP Client": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "gpt-4o-mini": {
+      "ai_languageModel": [
+        []
+      ]
+    },
+    "flash-2.5-preview-0520": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "da1e833b-c2da-468b-bb31-504859623263",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "48865266586a3b8532dcadb4bc328e0aed2deedd6bb4a61cf301de3e12e84118"
+  },
+  "id": "mKnRUkNJW4OtitWA",
+  "tags": []
+}

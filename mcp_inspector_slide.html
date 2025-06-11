@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        .slide-title {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 800;
+            font-size: 3rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .inspector-icon {
+            font-size: 4rem;
+            color: #FFD700;
+            margin-bottom: 2rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+        .left-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .what-is-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .box-title {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .box-content {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.5;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+        .feature-icon {
+            color: #51cf66;
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .usage-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            margin: 1rem 0;
+            overflow-x: auto;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .command-line {
+            color: #68d391;
+        }
+        .comment {
+            color: #a0aec0;
+            font-style: italic;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .benefit-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .debug-icon { color: #ff6b6b; }
+        .test-icon { color: #4ecdc4; }
+        .dev-icon { color: #ffe66d; }
+        .validate-icon { color: #a8e6cf; }
+        .benefit-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="inspector-icon">
+            <i class="fas fa-search-plus"></i>
+        </div>
+        
+        <h1 class="slide-title">
+            MCP Inspector: Debug & Develop
+        </h1>
+        
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="what-is-box">
+                    <h3 class="box-title">
+                        <i class="fas fa-info-circle" style="color: #4299e1;"></i>
+                        What is MCP Inspector?
+                    </h3>
+                    <div class="box-content">
+                        <p>A powerful debugging and development tool that lets you inspect, test, and validate MCP servers in real-time.</p>
+                        
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                Interactive server exploration
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                Real-time tool testing
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                Resource browsing
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                Prompt template validation
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-check feature-icon"></i>
+                                Protocol debugging
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="usage-box">
+                    <h3 class="box-title">
+                        <i class="fas fa-rocket" style="color: #ed8936;"></i>
+                        Why Use It?
+                    </h3>
+                    
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon debug-icon">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <div class="benefit-text">Debug Issues Fast</div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon test-icon">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="benefit-text">Test Before Deploy</div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon dev-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="benefit-text">Rapid Development</div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-icon validate-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <div class="benefit-text">Validate Schemas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="usage-box">
+                    <h3 class="box-title">
+                        <i class="fas fa-terminal" style="color: #38a169;"></i>
+                        Quick Start
+                    </h3>
+                    
+                    <div class="code-block">
+<span class="comment"># Install MCP Inspector</span>
+<span class="command-line">npm install -g @modelcontextprotocol/inspector</span>
+
+<span class="comment"># Inspect a local server</span>
+<span class="command-line">mcp-inspector stdio path/to/server.py</span>
+
+<span class="comment"># Inspect HTTP server</span>
+<span class="command-line">mcp-inspector http://localhost:8000</span>
+                    </div>
+                </div>
+                
+                <div class="usage-box">
+                    <h3 class="box-title">
+                        <i class="fas fa-eye" style="color: #9f7aea;"></i>
+                        What You'll See
+                    </h3>
+                    
+                    <div class="box-content">
+                        <ul class="features-list">
+                            <li class="feature-item">
+                                <i class="fas fa-tools feature-icon"></i>
+                                <strong>Available Tools:</strong> Test function calls with parameters
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-database feature-icon"></i>
+                                <strong>Resources:</strong> Browse and query data sources
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-comment-dots feature-icon"></i>
+                                <strong>Prompts:</strong> Preview and test prompt templates
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-exchange-alt feature-icon"></i>
+                                <strong>Protocol Messages:</strong> Raw MCP communication
+                            </li>
+                            <li class="feature-item">
+                                <i class="fas fa-exclamation-triangle feature-icon"></i>
+                                <strong>Error Details:</strong> Clear debugging information
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
