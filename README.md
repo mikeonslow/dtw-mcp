@@ -316,7 +316,15 @@ The MCP ecosystem is growing rapidly, with adoption across various sectors:
 
 ## Calculator Demo
 
-[Content coming soon]
+The Calculator MCP app demonstrates how an AI agent can use the Model Context Protocol (MCP) to perform calculations:
+
+- **MCP Server:** Exposes a calculator tool via MCP.  
+  [Calculator_MCP_Server.json](demos/calculator/Calculator_MCP_Server.json)
+
+- **MCP Client Agent:** Receives user messages, uses AI to interpret them, and calls the server for results.  
+  [Calculator_MCP_Client_Agent.json](demos/calculator/Calculator_MCP_Client_Agent.json)
+
+This setup shows secure, standardized, and extensible AI tool integration using MCP.
 
 ## Brand Kit Demo
 
