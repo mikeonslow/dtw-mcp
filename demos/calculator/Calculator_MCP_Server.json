@@ -1,0 +1,62 @@
+{
+  "name": "Calculator MCP Server",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "bearerAuth",
+        "path": "908ed131-36ab-44e5-ad76-76613d257057"
+      },
+      "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "typeVersion": 1,
+      "position": [
+        120,
+        -40
+      ],
+      "id": "aa165699-b99a-4e8f-808b-33ba73722b1d",
+      "name": "MCP Server Trigger",
+      "webhookId": "908ed131-36ab-44e5-ad76-76613d257057",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "JqEXtct1fyIIbktV",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        340,
+        160
+      ],
+      "id": "6f0e4b73-8ffb-42e4-9f3d-2d103bf306ae",
+      "name": "Calculator"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1d9a4676-7e64-454a-a0dd-d52bc4f17311",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "48865266586a3b8532dcadb4bc328e0aed2deedd6bb4a61cf301de3e12e84118"
+  },
+  "id": "BcVGaTi5AOvTHFrM",
+  "tags": []
+}
