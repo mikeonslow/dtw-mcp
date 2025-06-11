@@ -386,6 +386,11 @@ The Conversation Analyzer demo is a system that helps users search, analyze, and
 **In short:**  
 The client helps users ask questions and get answers, while the server does the heavy lifting of searching and analyzing the conversation data. Together, they make it easy to find insights in large sets of conversations.
 
+**Example Chat**
+
+[example-conv-intelligence-chat.pdf](example-conv-intelligence-chat.pdf)
+
+
 ## Auth
 
 [Content coming soon]
