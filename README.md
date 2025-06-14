@@ -37,10 +37,7 @@ Welcome to the interactive guide and demo repo for the "Model Context Protocol (
 8. [Live Demos](#live-demos)
     - [Connecting Clients](#client-integration)
     - [End-to-End Example Flows](#example-flows)
-9. [MCP Inspector & Debugging](#mcp-inspector--debugging)
-    - [Server Inspection & Testing](#server-inspection)
-    - [Tools & Resources Exploration](#tools-exploration)
-    - [Debugging Best Practices](#debugging)
+9. [MCP Inspector & Debugging](#server-inspection)
 10. [Deployment Options](#deployment-options)
     - [n8n](#n8n-deployment)
     - [Cloudflare](#cloudflare-deployment)
@@ -389,7 +386,6 @@ The client helps users ask questions and get answers, while the server does the 
 **Example Chat**
 
 [example-conv-intelligence-chat.pdf](example-conv-intelligence-chat.pdf)
-
 
 ## Auth
 
