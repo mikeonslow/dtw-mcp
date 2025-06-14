@@ -441,7 +441,11 @@ Authentication in MCP is essential for securing communication between clients an
 
 ## Server Inspection
 
-[Content coming soon]
+The Model Context Protocol (MCP) Server Inspector is a diagnostic tool designed to analyze and visualize the internal workings of model contexts within a server environment. It inspects incoming requests, traces token usage, and reveals how context windows are allocated and consumed during interactions with language models. This tool helps developers understand truncation behaviors, monitor context overflows, and debug prompt construction issues in real-time, making it invaluable for optimizing LLM performance in production systems.
+
+You start the spector by typing `npx @modelcontextprotocol/inspector`
+
+More documentation on inspector here: https://modelcontextprotocol.io/docs/tools/inspector
 
 ## n8n Deployment
 
